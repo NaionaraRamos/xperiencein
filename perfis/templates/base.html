@@ -1,0 +1,29 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset"utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static "static/styles/bootstrap.css" %}" rel="stylesheet">
+    <link href="{% static "static/styles/main.css" %}" rel="stylesheet">
+    <ittle>ExperienceIN</title>
+</head>
+
+<body>
+   <div class="container">
+	<div class="header">
+	    <ul class="nav nav-pill pull-right">
+	   	<li class=""><a href="{% url 'index' %}">{{perfil_logado.nome}}</a></li>
+		<li class=""><a href="/logout/">Logout</a></li>
+	    </ul>
+	    <h3 class="text-muted">ExperienceIN</h3>
+	</div>
+
+	<div class="row content">
+	    {% block body %}
+	    {% endblock %}
+	</div>
+    </div>
+</body>
+</html>

@@ -18,7 +18,7 @@ def exibir(request, perfil_id):
 #	return render(request, 'perfil.html', {'perfil': perfil, 'perfil_logado': get_perfil_logado(request), 'ja_e_contato': ja_e_contato})
 	return render(request, 'perfil.html', {'perfil':perfil, 'ja_e_contato':ja_e_contato})
 
-@permission_required('perfis.add_convite', raise_exception=True)
+#@permission_required('perfis.add_convite', raise_exception=True)
 @login_required
 def convidar(request, perfil_id):
 
